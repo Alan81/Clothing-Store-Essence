@@ -60,8 +60,7 @@ const MyNavbar = () => {
       <div 
         ref={topBarRef}
         className='top-bar py-2 text-center fs-6 fw-normal navbar-advertising fixed-top'
-        style={{ top: 0, zIndex: 1030 }}
-      >
+        style={{ top: 0, zIndex: 1030 }}>
         <Container>
           <span>Complimentary U.S. No-Rush Shipping on orders of $95 or more. Shop now</span>
         </Container>
@@ -75,8 +74,7 @@ const MyNavbar = () => {
         expanded={expanded} 
         onToggle={() => setExpanded(!expanded)}
         fixed="top"
-        style={{ top: `${topBarHeight}px` }}
-      >
+        style={{ top: `${topBarHeight}px` }}>
         <Container fluid className='px-3 px-lg-5'>
           {/* PHONE */}
           <div className="d-flex d-lg-none w-100 align-items-center">
