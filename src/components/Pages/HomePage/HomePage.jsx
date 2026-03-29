@@ -5,6 +5,7 @@ import Hero from './Hero'
 import Categories from './Categories'
 import ProductGrid from './ProductGrid'
 import Legend from './Legend'
+import About from './About'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Categories/>
         <ProductGrid/>
         <Legend/>
+        <About/>
         
         
         <section id="NewArrivals" className="mt-5 pt-5">

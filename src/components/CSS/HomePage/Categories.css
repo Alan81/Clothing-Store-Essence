@@ -13,3 +13,15 @@
 .text-hover-scale:hover {
     transform: scale(1.05);
 }
+
+.text-about-h3 {
+    padding: 5rem 0rem 1.5rem 0rem;
+}
+
+.text-about {
+    max-width: 900px; 
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 7rem;
+}
