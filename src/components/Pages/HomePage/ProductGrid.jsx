@@ -5,13 +5,14 @@ import Img3 from '../../Image/HomePages/Clothes 3.png'
 import Img4 from '../../Image/HomePages/Clothes 4.png'
 import Img5 from '../../Image/HomePages/Clothes 5.png'
 import { FiHeart, FiPlus } from "react-icons/fi";
+import { FaHeart } from "react-icons/fa6";
 import { Container, Card, Col, Row } from 'react-bootstrap'
 import { useCart } from '../HomePage/CardContent'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const ProductGrid = () => {
 
-  const { addToWishlist, addToCart} = useCart()
+  const { addToWishlist, addToCart, removeFromWishlist, wishlistItems} = useCart()
 
   const products = [
     {
@@ -61,7 +62,16 @@ const ProductGrid = () => {
     e.preventDefault()
     e.stopPropagation()
     addToWishlist(product)
+
+    const isFavorite = wishlistItems.some(item => item.id === product.id)
+    if (isFavorite) {
+      removeFromWishlist (product.id) 
+    } else {
+      addToWishlist (product)
+    }
   }
+
+  
 
   const handleAddToCart = (e, product) => {
     e.preventDefault()
@@ -79,8 +89,10 @@ const ProductGrid = () => {
       </Row>
 
       <Row className='g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5'>
-        {products.map((product) => (
-          <Col key={product.id} xs={12} sm={6} md={4} lg={2.4} className="custom-col">            
+        {products.map((product) => {
+          const isFavorite = wishlistItems.some(item => item.id === product.id)
+          return (
+            <Col key={product.id} xs={12} sm={6} md={4} lg={2.4} className="custom-col">            
             <Card className='hover-scale border-0 rounded-0 overflow-hidden position-relative h-100'>
               <a href={product.link} className='text-decoration-none'>
                 <Card.Img src={product.img}
@@ -98,7 +110,12 @@ const ProductGrid = () => {
                     onClick={(e) => {
                       handleAddToWishlist (e, product)
                     }}>
-                    <FiHeart size={18} />
+                      {isFavorite ? ( 
+                        <FaHeart size={18}/>
+                      ) :(
+                        <FiHeart size={18} />
+                      )}
+                    
                   </button>
                 </div>
 
@@ -130,7 +147,8 @@ const ProductGrid = () => {
               </Card.Body>
             </Card>
           </Col>
-        ))}
+          )
+        })}
       </Row>
     </Container>
   )

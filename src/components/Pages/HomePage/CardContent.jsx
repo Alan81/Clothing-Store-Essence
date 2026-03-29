@@ -3,36 +3,40 @@ import React, { createContext, useState, useContext } from 'react'
 
 const CartContext = createContext()
 
-export const useCart = () => useContext(CartContext)
+export const useCart = () => useContext(CartContext) // создали хук, чтобы брать данные из CartContext
 
 export const CartProvider = ({ children }) => {
-  // 👇 Теперь состояние живет здесь, а не в Navbar
-  const [wishlistCount, setWishlistCount] = useState(0)
-  const [cartCount, setCartCount] = useState(0)
+
   const [wishlistItems, setWishlistItems] = useState([])
   const [cartItems, setCartItems] = useState([])
+  const wishlistCount = wishlistItems.length
+  const cartCount = cartItems.length
 
   const addToWishlist = (product) => {
-    if (!wishlistItems.find(item => item.id === product.id)) {
-      setWishlistItems([...wishlistItems, product])
-      setWishlistCount(prev => prev + 1)
+    setWishlistItems((prevItems) => {
+      if (prevItems.find(item => item.id === product.id)) {
+      return prevItems
     }
+    return [...prevItems,product] // spreat-опереатор, расширение
+    })
+    
   }
 
   const addToCart = (product) => {
-    setCartItems([...cartItems, product])
-    setCartCount(prev => prev + 1)
+    setCartItems(prev => [...prev, product])
   }
 
   const removeFromWishlist = (productId) => {
     setWishlistItems(wishlistItems.filter(item => item.id !== productId))
-    setWishlistCount(prev => prev - 1)
+    wishlistCount(prev => prev - 1)
   }
 
   const removeFromCart = (productId) => {
     setCartItems(cartItems.filter(item => item.id !== productId))
-    setCartCount(prev => prev - 1)
+    cartCount(prev => prev - 1)
   }
+
+
 
   return (
     <CartContext.Provider value={{
