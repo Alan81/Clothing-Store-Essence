@@ -6,6 +6,8 @@ import Categories from './Categories'
 import ProductGrid from './ProductGrid'
 import Legend from './Legend'
 import About from './About'
+import WidberiesShop from './WidberiesShop'
+import Footer from '../Footer'
 
 
 function App() {
@@ -19,22 +21,9 @@ function App() {
         <ProductGrid/>
         <Legend/>
         <About/>
+        <WidberiesShop/>
+        <Footer/>
         
-        
-        <section id="NewArrivals" className="mt-5 pt-5">
-          <h2>Next Section</h2>
-          <p>Some content here...</p>
-        </section>
-        
-        <section id="Sales" className="mt-5 pt-5">
-          <h2>Next Section</h2>
-          <p>Some content here...</p>
-        </section>
-        
-        <section id="Journal" className="mt-5 pt-5 mb-5">
-          <h2>Next Section</h2>
-          <p>Some content here...</p>
-        </section>
       </div>
     </>
   )

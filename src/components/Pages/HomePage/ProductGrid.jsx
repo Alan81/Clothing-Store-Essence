@@ -92,13 +92,13 @@ const ProductGrid = () => {
         {products.map((product) => {
           const isFavorite = wishlistItems.some(item => item.id === product.id)
           return (
-            <Col key={product.id} xs={12} sm={6} md={4} lg={2.4} className="custom-col">            
+            <Col key={product.id} xs={12} sm={6} md={3} lg={2.4} className="custom-col">            
             <Card className='hover-scale border-0 rounded-0 overflow-hidden position-relative h-100'>
               <a href={product.link} className='text-decoration-none'>
                 <Card.Img src={product.img}
                 style={{
                   width: '100%',
-                  height: '350px',
+                  height: '300px',
                   objectFit: "cover",
                 }}/>
 

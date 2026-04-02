@@ -28,7 +28,7 @@ const Legend = () => {
 
             <Row className='g-4'>
                         {legend.map((end) => (
-                            <Col key={end.id} xs={12} md={4} lg={6}>
+                            <Col key={end.id} xs={12} md={6} lg={6}>
                                 <Card className='hover-scale border-0 rounded-0 overflow-hidden position-relative '>
                                     <Card.Link href={end.link}>
                                         <Card.Img src={end.img}
