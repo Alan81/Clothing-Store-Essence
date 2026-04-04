@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 body{
   font-family:"Montserrat", sans-serif;
   font-weight: 600;
@@ -28,5 +30,20 @@ body{
 
 .navbar-collapse {
   transition: all 0.3s ease;
+}
+
+.footer {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  background-color: #F8F9FA;
+  color: #8d8d8d;
+}
+
+.footer-conteiner {
+  display: none;
+}
+
+.footer-items {
+  max-width: 200px;
 }
 
