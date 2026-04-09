@@ -16,14 +16,14 @@ const Footer = () => {
   return (
     <Navbar as='footer' className='mt-auto footer'>
       <Container style={{display: "block"}}>
-        <Row className='g-4 align-items-start'>
+        <Row className='g-4  align-items-stretch'>
           
           <Col xs={12} md={6} lg={2}>
             <h6 className='fw-medium mb-3'>CONTACT US</h6>
-            <div className='d-flex flex-column gap-1'>
-              <p className='text-dark mb-0'>+1 (844) 326-6000</p>
-              <p className='text-dark mb-0'>Email Us</p>
-              <p className='text-dark mb-0'>Mon-Fri 9am-3pm PT</p>
+            <div className='d-flex flex-column gap-1 pt-2'>
+              <p className='text-dark mb-0 pb-2'>+1 (844) 326-6000</p>
+              <p className='text-dark mb-0 pb-2'>Email Us</p>
+              <p className='text-dark mb-0 pb-1'>Mon-Fri 9am-3pm PT</p>
             </div>
           </Col>
 

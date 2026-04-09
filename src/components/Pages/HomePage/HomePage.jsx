@@ -8,6 +8,7 @@ import Legend from './Legend'
 import About from './About'
 import WidberiesShop from './WidberiesShop'
 import Footer from '../Footer'
+import Advertisement from './Advertisement'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Footer/>
         
       </div>
+      <Advertisement/>
     </>
   )
 }
