@@ -7,7 +7,7 @@ import Img5 from '../../Image/HomePages/Clothes 5.png'
 import { FiHeart, FiPlus } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa6";
 import { Container, Card, Col, Row } from 'react-bootstrap'
-import { useCart } from '../HomePage/CardContent'
+import { useCart } from '../Home/CardContent'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const ProductGrid = () => {

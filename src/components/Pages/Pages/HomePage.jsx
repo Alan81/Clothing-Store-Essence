@@ -1,15 +1,14 @@
 import React from 'react'
-import MyNavbar from './Navbar'
+import MyNavbar from '../Common/Navbar'
+import Hero from '../Home/Hero'
+import Categories from '../Home/Categories'
+import ProductGrid from '../Home/ProductGrid'
+import Legend from '../Home/Legend'
+import About from '../Home/About'
+import WidberiesShop from '../Home/WidberiesShop'
+import Footer from '../Common/Footer'
+import Advertisement from '../Home/Advertisement'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Hero from './Hero'
-import Categories from './Categories'
-import ProductGrid from './ProductGrid'
-import Legend from './Legend'
-import About from './About'
-import WidberiesShop from './WidberiesShop'
-import Footer from '../Footer'
-import Advertisement from './Advertisement'
-
 
 function App() {
   return (

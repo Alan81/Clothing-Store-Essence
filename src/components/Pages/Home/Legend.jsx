@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../CSS/HomePage/Categories.css'
+import '../../CSS/HomePage/HomePage.css'
 import Img1 from '../../Image/HomePages/Collection banner 4.png'
 import Img2 from '../../Image/HomePages/Collection banner 5.png'
 import { Container, Card, Col, Row } from 'react-bootstrap'

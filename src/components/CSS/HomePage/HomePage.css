@@ -1,3 +1,22 @@
+/* ================= HERO ================== */
+.img-hero {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+}
+
+.hero-button {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+    transform: scale(1.05);}
+
+/* ============== Categories ============== */
+
 .hover-scale {
     transition: transform 0.4s ease-in-out;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../../CSS/HomePage/Categories.css'
+import '../../CSS/HomePage/HomePage.css'
 import Img1 from '../../Image/HomePages/Collection banner.png'
 import Img2 from '../../Image/HomePages/Collection banner 2.png'
 import Img3 from '../../Image/HomePages/Collection banner 3.png'

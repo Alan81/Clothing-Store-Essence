@@ -4,9 +4,9 @@ import { FiShoppingBag } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import { useCart } from '../../Pages/HomePage/CardContent' 
+import { useCart } from '../Home/CardContent' 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../../CSS/HomePage/Navbar.css'
+import '../../CSS/Common/Navbar.css'
 
 const MyNavbar = () => {
   const [expanded, setExpanded] = useState(false)
