@@ -1,0 +1,175 @@
+/* SearchMenu.css */
+
+/* Затемнение фона */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1031;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Меню поиска */
+.search-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1032;
+  padding: 2rem 0 3rem 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  animation: slideDown 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Строка поиска */
+.search-row {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+.search-close {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.search-close:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+/* Категории */
+.categories-row {
+  margin-top: 1rem;
+}
+
+.category-column {
+  margin-bottom: 2rem;
+}
+
+.category-group {
+  margin-bottom: 1rem;
+}
+
+.category-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.category-list li:hover {
+  color: #000;
+  transform: translateX(5px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .search-menu {
+    padding: 1rem 0 2rem 0;
+  }
+
+  .search-input {
+    font-size: 1rem;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+  }
+
+  .category-title {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .category-list li {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* Стили для скролла внутри меню */
+.search-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.search-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.search-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
